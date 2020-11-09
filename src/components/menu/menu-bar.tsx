@@ -2,7 +2,7 @@ import React, {useCallback, useEffect, useState} from "react";
 import {AppBar, IconButton, Toolbar, Typography} from "@material-ui/core";
 import MenuIcon from '@material-ui/icons/Menu';
 import ResponsiveDrawer from "./menu-drawer";
-import {useLocation, useParams} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import {URLParam} from "../roteador/roteador";
 import {getControllerNames} from "../../api/controller-defs";
 
