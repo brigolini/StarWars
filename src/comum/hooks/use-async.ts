@@ -8,6 +8,7 @@ export interface AsyncReturnType<T> {
 
 /**
  * Executa uma operação assíncrona, retornando se houve algum erro na execução, e dizendo que ela ainda está sendo executada
+ * Há um problema com React a respeito do deps pois ele não consegue garantir que todas as dependências necessárias estão presentes
  * @param asyncFn função que tem a operação assíncrona
  * @param deps Se alguma das dependências mudar, a operação assíncrona é executada novamente
  */
