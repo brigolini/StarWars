@@ -1,4 +1,4 @@
-import {ObjectWithId} from "@material-ui/data-grid";
+import {GenericSchema} from "./generic-schema";
 
 /* tslint:disable */
 /**
@@ -11,7 +11,7 @@ import {ObjectWithId} from "@material-ui/data-grid";
 /**
  * A planet.
  */
-export interface Planet extends ObjectWithId {
+export interface Planet extends GenericSchema {
     /**
      * The diameter of this planet in kilometers.
      */

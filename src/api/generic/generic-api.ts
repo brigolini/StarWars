@@ -8,21 +8,25 @@ export interface PageData {
     totalRegistros : number;
 }
 
-interface PagebleResponse<T> {
+export interface PagebleResponse<T> {
     dados: T[];
     page: PageData;
 }
 
 export interface ResourceReturn<T> {
     getSchema: () => Promise<any>;
-    getById: (id: Number)=> Promise<T>;
+    getById: (id: number)=> Promise<T>;
     getByPartialName: (search: string, pageNumber: number) => Promise<PagebleResponse<T>>
     getAll: (page: number) => Promise<PagebleResponse<T>>;
 }
 
 export type SWAPIEndpoint = 'people' | 'films' | 'starships' | 'vehicles' | 'species' | 'planets';
 
-
+/**
+ * Faz acesso aos endpoints da SWAPI
+ * @param endpoint qual endpoint deve ser acessado por esse controller.
+ * @T Tipo de dado a ser devolvido. Utilizado pelo TS para facilitar o trabalho de tipagem
+ */
 export const genericController = <T>(endpoint: SWAPIEndpoint): ResourceReturn<T> => {
 
     const axios = getAxiosInstance();

@@ -1,6 +1,6 @@
 import {Drawer, List, ListItem, ListItemText} from "@material-ui/core";
 import React from "react";
-import {getControllerNames} from "../list/controller-defs";
+import {getControllerNames} from "../../api/controller-defs";
 import {useHistory} from "react-router-dom";
 
 const MenuList = () => {
@@ -16,6 +16,7 @@ const MenuList = () => {
         </List>
     </div>)
 };
+
 type MenuDrawerProps = { open: boolean, onClose: () => void };
 const MenuDrawer = (props: MenuDrawerProps) => {
     const {open, onClose} = props;

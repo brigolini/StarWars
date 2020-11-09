@@ -1,0 +1,21 @@
+.box {
+    border: 1px solid #E5E5E5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    grid-template-columns: 70fr 30fr;
+    overflow: hidden;
+    height: 10em;
+    width: 35em;
+    padding: 2em;
+    place-items: flex-start;
+}
+
+.spanMessage {
+    font-size: 31px;
+    line-height: 36px;
+    font-weight: bold;
+    color: #031323;
+}
