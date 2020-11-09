@@ -6,6 +6,7 @@ import {SWAPIEndpoint} from "../../api/generic/generic-api";
 import {getDetailData} from "../../api/controller-defs";
 import {Button, CircularProgress, Grid} from "@material-ui/core";
 import {useHistory} from "react-router-dom";
+import TelaErro from "../erro/tela-erro";
 
 interface DetalheProps {
     id: number;
@@ -14,15 +15,21 @@ interface DetalheProps {
 
 const Detalhe = (props:DetalheProps) => {
     const {id,controller} = props;
-    const {isLoading, result} = useDetalhe<People>(id, controller);
+    const {isLoading, result,error} = useDetalhe<People>(id, controller);
     const history = useHistory();
     if (isLoading) return <div className={'centralizado'}><CircularProgress/></div>
-    if (!result) return null;
+
     const colunas = getDetailData(controller);
     if (!colunas) return null;
     const handleClick=()=>{
         history.goBack();
     }
+
+    if (error) {
+        history.push('/erro/Não conseguimos acessar os nossos servidores')
+        return <TelaErro/>;
+    }
+    if (!result) return null;
     return (
         <>
             <Grid container direction={"column"} spacing={2} alignItems={"stretch"}>

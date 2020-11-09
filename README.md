@@ -27,3 +27,7 @@ Gera um build da app para produção
 ### `yarn eject`
 
 Ejeta dos scripts react.
+
+## Alguns pontos:
+
+A app ainda carece de um melhor tratamento de erros de boundary.
