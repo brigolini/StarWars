@@ -26,7 +26,7 @@ afterEach(() => {
 describe('Testes da lista de dados', () => {
     let timeoutDefault = 50000;
 
-    test('Carrega a lista com 10 linhas', async () => {
+    test.skip('Carrega a lista com 10 linhas', async () => {
 
 
         await page.goto('http://localhost:3000/list/people/1');
@@ -38,7 +38,7 @@ describe('Testes da lista de dados', () => {
 
     }, timeoutDefault);
 
-    test('Deixa desabilidada a pesquisa se não for a primeira página', async () => {
+    test.skip('Deixa desabilidada a pesquisa se não for a primeira página', async () => {
 
 
         await page.goto('http://localhost:3000/list/people/2');
@@ -50,7 +50,7 @@ describe('Testes da lista de dados', () => {
 
     }, timeoutDefault);
 
-    test('Faz pesquisa corretamente', async () => {
+    test.skip('Faz pesquisa corretamente', async () => {
 
 
         await page.goto('http://localhost:3000/list/people/1');

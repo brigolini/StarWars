@@ -26,7 +26,7 @@ afterEach(() => {
 describe('Testes do detalhe', () => {
     let timeoutDefault = 50000;
 
-    test('Carrega detalhe', async () => {
+    test.skip('Carrega detalhe', async () => {
 
 
         await page.goto('http://localhost:3000/detail/people/1');
