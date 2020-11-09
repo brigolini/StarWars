@@ -26,9 +26,9 @@ controllerData.set("films", {
     columnData: [
         {field: 'title', headerName: 'Título', width: 170},
         {field: 'director', headerName: 'Diretor', width: 170},
-        {field: 'hair_color', headerName: 'Produtor', width: 170},
+        {field: 'producer', headerName: 'Produtor', width: 170},
     ],
-    detailData:['title','director','hair_color','opening_crawl'],
+    detailData:['title','director','producer','opening_crawl'],
     menu: {titulo:'Filmes',rota:'films'}
 })
 
