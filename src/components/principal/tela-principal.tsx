@@ -4,7 +4,7 @@ const TelaPrincipal = () => {
     return (
         <>
             <div className={"telaPrincipal"}>
-                <section className="star-wars">
+                <section className="letreiro">
                     <div className="crawl">
 
                         <div className="title">
