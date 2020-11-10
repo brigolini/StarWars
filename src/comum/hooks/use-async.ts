@@ -25,8 +25,8 @@ export const useAsync = <T>(asyncFn: Promise<T>, deps: DependencyList): AsyncRet
                 setIsLoading(false);
                 setResult(informacoes)
             } catch (error) {
-                setError(true);
-                setIsLoading(false);
+                    setError(true);
+                    setIsLoading(false);
             }
         }
         fn();

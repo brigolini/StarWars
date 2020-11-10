@@ -21,7 +21,7 @@ export const useLista = <T extends GenericSchema>(page: number, expressaoBusca:s
     const [pageData, setPageData] = useState<PageData>()
 
 
-    const controller = useMemo(()=>genericController<T>(controllerName).getByPartialName(expressaoBusca,page),[controllerName]);
+    const controller = useMemo(()=>genericController<T>(controllerName).getByPartialName(expressaoBusca,page),[controllerName,expressaoBusca,page]);
     const {result,isLoading,error} =
         useAsync<PagebleResponse<T>>(controller,[page,expressaoBusca,controllerName]);
 

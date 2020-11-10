@@ -48,7 +48,7 @@ describe('Testes do detalhe', () => {
 
         const linhasJSon = getDetailData('people');
         const linhas = await page
-            .evaluate(() => Array.from(document.querySelectorAll('.MuiAccordionDetails-root'), element => element));
+            .evaluate(() => Array.from(document.querySelectorAll('.MuiAccordionDetails-root'), element => element.textContent));
         expect(linhas.length).toBe(linhasJSon.length);
 
     }, timeoutDefault);
