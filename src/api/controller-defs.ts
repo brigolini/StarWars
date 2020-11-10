@@ -1,7 +1,7 @@
 import {ColDef} from "@material-ui/data-grid";
 import {SWAPIEndpoint} from "./generic/generic-api";
 
-type MenuDefs = {titulo:string,rota:SWAPIEndpoint};
+export type MenuDefs = {titulo:string,rota:SWAPIEndpoint};
 
 interface ControllerDefs {
     columnData: ColDef[],
