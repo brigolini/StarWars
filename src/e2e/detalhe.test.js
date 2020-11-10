@@ -1,3 +1,5 @@
+import {getDetailData} from "../api/controller-defs";
+
 const faker = require('faker');
 const puppeteer = require('puppeteer');
 
@@ -26,7 +28,7 @@ afterEach(() => {
 describe('Testes do detalhe', () => {
     let timeoutDefault = 50000;
 
-    test.skip('Carrega detalhe', async () => {
+    test('Carrega detalhe', async () => {
 
 
         await page.goto('http://localhost:3000/detail/people/1');
@@ -35,6 +37,19 @@ describe('Testes do detalhe', () => {
         const linhas = await page
             .evaluate(() => Array.from(document.querySelectorAll('.MuiAccordionDetails-root'), element => element.textContent));
         expect(linhas[0]).toBe('Luke Skywalker');
+
+    }, timeoutDefault);
+
+    test('Mostra todos os itens do array de campos de detalhe', async () => {
+
+
+        await page.goto('http://localhost:3000/detail/people/1');
+        await page.waitForSelector('.MuiAccordionDetails-root');
+
+        const linhasJSon = getDetailData('people');
+        const linhas = await page
+            .evaluate(() => Array.from(document.querySelectorAll('.MuiAccordionDetails-root'), element => element));
+        expect(linhas.length).toBe(linhasJSon.length);
 
     }, timeoutDefault);
 

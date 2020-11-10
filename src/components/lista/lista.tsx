@@ -55,7 +55,7 @@ export const Lista = <T extends GenericSchema>(props: ListaProps)=> {
                 </Grid>
                 <Grid item>
                     <div style={{ height: 400, width: '100%' }}>
-                    <DataGrid autoHeight rows={data} rowsPerPageOptions={[]} rowCount={pageData?.totalRegistros}
+                    <DataGrid autoHeight rows={data} rowCount={pageData?.totalRegistros}
                               loading={isLoading}
                               columns={columns}
                               page={page} pageSize={10} onRowClick={handleRowClick} onPageChange={handlePageChange}

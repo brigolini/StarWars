@@ -40,7 +40,7 @@ const Detalhe = (props:DetalheProps) => {
                 })
                 .map((item) => {
                 const [key, value] = item;
-                    return <Grid item><Field nome={key} valor={value}/></Grid>
+                    return <Grid key={key} item><Field nome={key} valor={value}/></Grid>
             })}
             <Grid item className={'centralizado'}>
                 <Button variant={"outlined"} onClick={handleClick}>Voltar</Button>
